@@ -1,0 +1,24 @@
+{
+	"name": "Chrome Extension Template",
+	"description": "A template for Chrome Extensions",
+	"version": "2.0",
+	"permissions": [
+		
+	],
+	"browser_action": {
+		"default_icon": "images/icon.png",
+		"default_popup": "popup.html",
+		"default_title": "Awesome Youtube Extension"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*","https://*/*"],
+			"js": ["js/jquery.js"]
+		}
+	],
+	"background": {
+		"scripts": ["js/background.js"],
+		"persistent": false
+	},
+	"manifest_version": 2
+}
